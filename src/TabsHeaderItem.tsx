@@ -91,7 +91,7 @@ export default function TabsHeaderItem({
           ]}
         >
           {tab.props.icon ? (
-            <MaterialCommunityIcon
+            typeof tab.props.icon==='function' ? tab.props.icon(24, color) : <MaterialCommunityIcon
               selectable={false}
               accessibilityElementsHidden={true}
               importantForAccessibility="no"
